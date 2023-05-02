@@ -1,0 +1,313 @@
+//---------Tool Tip---------
+.tooltip {
+	background-color: transparent;
+	//Tool Tip Arrow
+	.tooltip-arrow {
+		color: var(--sidebar-color);
+		background-color: transparent;
+		margin-left: 13px;
+	}
+	//Inner Tool Tip
+	.tooltip-inner {
+		margin-left: 14px;
+		background-color: green($color: #20b72d);
+		color: aqua;
+		max-width: 150px;
+	}
+}
+
+//---------Main Content---------
+#content {
+	width: 85%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	z-index: 50;
+	//Upload Form
+	.upload {
+		margin-top: 1rem;
+		width: 100%;
+		height: 150px;
+		min-height: 150px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		form {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			//Submit Button
+			.submit {
+				background-color: rgb(88, 49, 88);
+				color :aqua;
+				font-weight: 600;
+				word-spacing: 0.25rem;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				text-align: center;
+				border-radius: 10px;
+				padding: 15px 75px;
+				text-transform: uppercase;
+				box-shadow:none;
+				&:focus {
+					outline: none;
+					border: none;
+					box-shadow: 0px 2px 0px 0px rgb(226, 106, 31),0px 4px 0px 0px white,0px 6px 0px 0px green;
+				}
+			}
+			.upload-wrapper {
+				position: relative;
+				overflow: hidden;
+				display: inline-block;
+				.btn {
+					background-color: rgb(88, 49, 88);
+					padding: 15px 45px;
+					text-align: center;
+					text-transform: uppercase;
+					background-size: 200% auto;
+					color:aqua;
+					display: block;
+					border-radius: 10px;
+					flex: 0 0 80%;
+					font-weight: 600;
+					word-spacing: 0.2rem;
+					letter-spacing: 0.1rem;
+					box-shadow:none;
+					border: none;
+					outline: none;
+					word-break: break-all;
+					&.active {
+						background-color: var(--primary-text-color);
+						color: var(--sidebar-color);
+					}
+					&:focus {
+						outline: none;
+						border: none;
+						
+					}
+				}
+				//Input Files
+				input[type="file"],
+				input[type="file"]::-webkit-file-upload-button {
+					cursor: pointer;
+					word-break: break-all;
+				}
+				input[type="file"] {
+					cursor: pointer;
+					font-size: 100px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					opacity: 0;
+					word-break: break-all;
+				}
+			}
+			flex-wrap: wrap;
+		}
+	}
+	//---------Table---------
+	.table {
+		width: 90%;
+		margin: auto;
+		margin-top: 1rem;
+		// overflow-x: scroll;
+		table {
+			width: 100%;
+			//Headings
+			.heading {
+				background-color: rgb(206, 120, 215);
+				transition: all 0.15s ease-in-out;
+				&:hover {
+					background-color: var(--hover-color);
+					background-color: rgb(65, 162, 12);
+					color: var(--sidebar-color);
+					cursor: pointer;
+				}
+				&.active {
+					background-color: var(--hover-color);
+					color: var(--sidebar-color);
+				}
+				i {
+					display: none;
+					&.active {
+						display: inline-block;
+					}
+				}
+			}
+		}
+		//Scrollbar
+		&::-webkit-scrollbar {
+			width: 20px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: var(--primary-text-color);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--secondary-text-color);
+			box-shadow: inset 2px 2px 5px 0 rgba(#e8f9fd, 0.5);
+		}
+	}
+	//---------Pagination---------
+	.pagination {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		gap: 2rem;
+		margin-top: 2rem;
+		//Next Previous Buttons
+		button {
+			display: none;
+			text-align: center;
+			padding: 5px 15px;
+			border: none;
+			outline: none;
+			background: transparent;
+			font-weight: 700;
+			border: 2px solid var(--sidebar-color);
+			cursor: pointer;
+			transition: all 0.15s ease-in-out;
+			&:hover {
+				background-color: var(--primary-text-color);
+			}
+		}
+	}
+	//---------Page Numbers---------
+	.pages {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		gap: 2rem;
+		margin-top: 2rem;
+		padding: 0;
+		li {
+			list-style: none;
+			border-radius: 50%;
+			background-color: var(--sidebar-color);
+			color: var(--primary-text-color);
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			transition: all 0.15s ease-in-out;
+			&:hover {
+				background-color: var(--primary-text-color);
+				color: var(--sidebar-color);
+			}
+			&.active {
+				background-color: var(--primary-text-color);
+				color: var(--sidebar-color);
+			}
+			p {
+				text-align: center;
+				font-size: 1.5rem;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: 600;
+			}
+		}
+	}
+	//---------Header Titles---------
+	header {
+		width: 100%;
+		margin-top: 3rem;
+		h2 {
+			word-spacing: 0.2rem;
+			font-weight: 700;
+			text-align: center;
+			width: 100%;
+		}
+	}
+	//---------Column Chart---------
+	.chart {
+		width: 90%;
+		max-height: 500px;
+		margin: auto;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		// overflow-x: scroll;
+		.stats {
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			justify-content: center;
+			align-items: flex-start;
+			display: none;
+			&::-webkit-scrollbar {
+				display: none;
+				overflow: hidden;
+			}
+		}
+		//Scrollbar
+		&::-webkit-scrollbar {
+			width: 20px;
+			display: none;
+			overflow: hidden;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: var(--primary-text-color);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--secondary-text-color);
+			box-shadow: inset 2px 2px 5px 0 rgba(#e8f9fd, 0.5);
+		}
+	}
+	//---------Pie Chart---------
+	.chart2 {
+		width: 90%;
+		max-height: 500px;
+		margin: auto;
+		margin-bottom: 5rem;
+		// overflow-x: scroll;
+		#pie {
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			justify-content: center;
+			align-items: flex-start;
+			display: none;
+			&::-webkit-scrollbar {
+				display: none;
+				overflow: hidden;
+			}
+			//---------Media Query---------
+			@media (max-width: 700px) {
+				justify-content: flex-start;
+			}
+		}
+		//Scrollbar
+		&::-webkit-scrollbar {
+			width: 20px;
+			display: none;
+			overflow: hidden;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: var(--primary-text-color);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--secondary-text-color);
+			box-shadow: inset 2px 2px 5px 0 rgba(#e8f9fd, 0.5);
+		}
+	}
+}
+
+//---------Media Query---------
+@media screen and (max-width: 700px) {
+	#content .chart {
+		width: 90%;
+		height: 370px;
+		max-height: 370px;
+	}
+}

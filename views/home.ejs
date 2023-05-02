@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="<%= assetPath('css/home.css') %>" />
+<script
+	defer
+	type="text/javascript"
+	src="<%= assetPath('js/home.js') %>"
+></script>
+
+<!-- Sidebar -->
+<%- include('_sidebar.ejs') %>
+<!-- Main Content -->
+<section id="content">
+	<!-- Upload Form -->
+	<div class="upload">
+		<form
+			action="/upload"
+			method="post"
+			enctype="multipart/form-data"
+			style="gap: 1rem"
+		>
+			<div class="upload-wrapper">
+				<button class="btn upload-btn">Choose File</button>
+				<input
+					type="file"
+					name="file"
+					class="file"
+					accept=".csv"
+					required
+				/>
+			</div>
+			<button type="submit" class="submit btn btn-dark">Upload</button>
+		</form>
+	</div>
+
+	<header><h2>Parsed Data</h2></header>
+
+	<!-- Table -->
+	<div class="table">
+
+	</div>
+
+	<!-- Pagination -->
+	<div class="pagination">
+		<button class="prev-btn">
+			<i class="fa-solid fa-arrow-left-long"></i>&emsp;Prev
+		</button>
+		<button class="next-btn">
+			Next&emsp;<i class="fa-solid fa-arrow-right-long"></i>
+		</button>
+	</div>
+
+	<!-- Page Numbers -->
+	<ul class="pages"></ul>
+
+	<header style="margin-top: 5rem"><h2>Statistics</h2></header>
+
+	<!-- Column Chart -->
+	<div class="chart">
+		<div id="stats" class="stats"></div>
+	</div>
+
+	<!-- Pie Chart -->
+	<div class="chart2">
+		<div id="pie" class="stats"></div>
+	</div>
+</section>

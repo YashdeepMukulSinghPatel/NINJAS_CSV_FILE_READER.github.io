@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="<%= assetPath('css/sidebar.css') %>" />
+<script defer src="<%= assetPath('js/sidebar.js') %>"></script>
+
+
+<!-- Sidebar -->
+<section id="sidebar">
+	<h3>CSV File Reader</h3>
+	<hr />
+<!-- Search Input -->
+	<div
+		class="search input-group mb-5 mt-4"
+		data-bs-toggle="tooltip"
+		data-bs-title="Please select a <b>Column</b> to <b>Search</b>!"
+	>
+		<input
+			type="text"
+			class="form-control"
+			placeholder="Search"
+			aria-label="Search"
+		/>
+	</div>
+<!-- Files -->
+	<div class="files">
+		<% for(let file of files){ %>
+		<div class="filename" data-id="<%= file.id %>">
+			<span
+				><%= file.name %>&emsp;<i
+					class="fa-solid fa-trash"
+					data-id="<%= file.id %>"
+				></i
+			></span>
+		</div>
+		<% } %>
+	</div>
+</section>

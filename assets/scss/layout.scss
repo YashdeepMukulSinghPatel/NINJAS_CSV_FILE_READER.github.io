@@ -1,0 +1,78 @@
+//---------Imports---------
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Red+Hat+Display:wght@300;400;500&display=swap");
+
+//---------General Styling---------
+* {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	user-select: none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+//---------Root Styling :: CSS Variables---------
+:root {
+	--background-color:rgb(90, 188, 212);
+	--sidebar-color: #f585d5;
+	--primary-text-color: #12d148;
+	--secondary-text-color: #e25959;
+	--hover-color: #a8da84;
+	--text-family: "Red Hat Display", sans-serif;
+}
+
+//---------Body---------
+body {
+	overflow-x: hidden;
+	&::-webkit-scrollbar {
+		display: none;
+		overflow: hidden;
+	}
+}
+
+//---------Heading Titles---------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	color: var(--secondary-text-color);
+}
+h3 {
+	color: var(--primary-text-color);
+	font-size: 1.4rem;
+	word-break: break-all;
+}
+
+//---------Main Content Body---------
+main {
+	background-color: rgb(52, 166, 158);
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	overflow: scroll;
+	position: relative;
+	border-radius: 20px;
+	border:5px solid red;
+	&::-webkit-scrollbar {
+		display: none;
+		overflow: hidden;
+	}
+}
+
+//---------Media Query---------
+@media screen and (max-width: 700px) {
+	main {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
