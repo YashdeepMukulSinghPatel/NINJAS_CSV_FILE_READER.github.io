@@ -1,5 +1,6 @@
 #  𝐂𝐒𝐕 𝐅𝐢𝐥𝐞 𝐑𝐞𝐚𝐝𝐞𝐫 🦁
-# 🔗🌐Checkout the Website 
+# 🔗Links👇
+# 🌐Checkout the Website [𓂀 𝕎𝕖𝕓 𝔸𝕡𝕡𝕝𝕚𝕔𝕒𝕥𝕚𝕠𝕟 𓂀]()
 ---
 ## Introduction : 🫵
 The CSV File Reader is a Full Stack Application built using MongoDB, ExpressJS, NodeJS, EJS, Express Partials-Layouts, GulpJS. 
@@ -43,14 +44,15 @@ Users are able to upload, read, delete the files from the application.
   🟠If you want to run the project in production mode then go to '.env' file & set,
   ---
     DEPLOYMENT=local
-  ---
+    
   🟠For Development Mode:
-    Run 'npm run dev_start' in GitBash Terminal
+    Run 'npm start' in GitBash Terminal
   ---
   🟠For Production Mode:
     Run 'npm run prod_start' in GitBash Terminal
   ---
-  
+  🟠Run 'npm start' in GitBash Terminal
+  ---
   # Tools Used 🛠️:
   <img width="100" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRL37a98t6tH4jqXJ55nh1N_LGiT0F90ucnWMdXr0Xbw&s">
   <img width="100" height="100" src="https://dkl2gez3gijkp.cloudfront.net/lib/uploads/2012/12/css-3-help1.jpg">  
@@ -61,3 +63,28 @@ Users are able to upload, read, delete the files from the application.
   <img width="100" height="100" src="https://newrelic.com/sites/default/files/styles/og_image/public/2021-10/mongo_logo.jpg?h=2a479378&itok=_jsp1xWA">
   <img width="100" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLy-1SN4fo9U4Sn7S4aI_PyQr5x9sODPQ6V2-YHT4&s">
   
+ # Use Of Library 📙:
+ 
+    🟠 connect-flash
+    🟠 connect-mongo   
+    🟠 cors
+    🟠 csv-parse
+    🟠 del
+    🟠 dotenv
+    🟠 ejs
+    🟠 express
+    🟠 express-ejs-layouts
+    🟠 express-session
+    🟠 gulp
+    🟠 gulp-cssnano
+    🟠 gulp-imagemin
+    🟠 gulp-rev
+    🟠 gulp-sass
+    🟠 gulp-uglify-es
+    🟠 mongoose
+    🟠 morgan
+    🟠 multer
+    🟠 node-env
+    🟠 node-sass
+    🟠 node-sass-middleware
+    🟠 rotating-file-stream
