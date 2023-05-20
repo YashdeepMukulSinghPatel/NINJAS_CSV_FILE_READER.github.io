@@ -30,7 +30,7 @@ Users are able to upload, read, delete the files from the application.
 
 
     
-# Getting Started With The Project🏃
+# Getting Started With The Project🏃 👇
   🟠Fork the Project in your Repository.
   ---
   🟠Clone the Forked Repository in your Local System.
